@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+
+  mbiApiDocs:
+    hostname: mbiApiDocs
+    container_name: mbiApiDocs
+    image: mbi-api-docs:local-dev
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "29781:29781"
+    volumes:
+      -  "./:/home/mbi-api-docs:rw,cached"
+    environment:
+      TZ: "Asia/Seoul"
+    command: mkdocs serve -a 0.0.0.0:29781
+    networks:
+      - bridge-network
+
+networks:
+  bridge-network:
+    external: true

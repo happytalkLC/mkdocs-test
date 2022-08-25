@@ -1,0 +1,39 @@
+---
+hide:
+  - footer
+---
+
+# Biz API 소개 및 사용법
+---
+
+## Introduce
+!!! question ""
+    Biz API 는 자체 구축 챗봇을 가지고 있는 업체에서 채팅 상담을 사용하기 위하여 해피톡에서  
+    제공하는 API 리스트 입니다. 방생성, 메세지 발신, 상담종료, 메세지 수신 등의 기능이 있습니다.
+
+## API HOST
+| Division | HOST URL                           |
+|----------|------------------------------------|
+| 개발      | https://patch-biz-api.happytalk.io |
+| 운영      | https://biz-api.happytalk.io       |
+
+## Auth Key Description
+!!! info "인증키 발급 방법"
+    Biz API는 인증 방식으로 Header에 `HT-Client-Id, HT-Client-Secret` 값을 통하여 인증을 하고 있습니다.  
+    Header에 들어가는 인증 키 (`HT-Client-Id, HT-Client-Secret`)는 고객센터를 통해 `외부 메신저 API`에서  
+    `key (HT-Client-Id)`와 `Token (HT-Client-Secret)`를 발급 받으실 수 있습니다.
+
+## API List
+ - 상담
+     - [상담방 생성](/Biz-API/counsel/create_counseling/)
+     - [상담 종료](/Biz-API/counsel/end_counseling/)
+     - [메시지 발신](/Biz-API/counsel/send_message/)
+     - [이전 상담사 연결 가능 여부](/Biz-API/counsel/check_previous_counselor/)
+
+
+## Change History
+!!! tip "History"
+    ??? quote "2022.08.20"
+        ```text
+        최초 작성
+        ```
